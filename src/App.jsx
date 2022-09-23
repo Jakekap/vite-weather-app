@@ -1,33 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import Shower from './assets/img/Shower.png'
 
 function App() {
-	const [count, setCount] = useState(0)
-
 	return (
-		<div className='App'>
-			<h1 className='text-3xl font-bold underline'>Hello world!</h1>
-			<div>
-				<a href='https://vitejs.dev' target='_blank' rel='noreferrer'>
-					<img src='/vite.svg' className='logo' alt='Vite logo' />
-				</a>
-				<a href='https://reactjs.org' target='_blank' rel='noreferrer'>
-					<img src={reactLogo} className='logo react' alt='React logo' />
-				</a>
+		<div className='flex'>
+			<div className='h-screen w-1/3 bg-sky-blue'>
+				<div className='flex w-full h-24 justify-between px-10 items-center'>
+					<button className='w-40 h-10 font-raleway font-medium bg-gray-600 text-white'>
+						Search for places
+					</button>
+					<button className='h-10 w-10 bg-gray-600 rounded-full'>+</button>
+				</div>
+				<div className='bg-clouds-pattern opacity-10 bg-no-repeat bg-cover bg-center h-1/2'>
+					<img className='opacity-75' src={Shower} />
+				</div>
 			</div>
-			<h1>Vite + React</h1>
-			<div className='card'>
-				<button onClick={() => setCount((count) => count + 1)}>
-					count is {count}
-				</button>
-				<p>
-					Edit <code>src/App.jsx</code> and save to test HMR
-				</p>
-			</div>
-			<p className='read-the-docs'>
-				Click on the Vite and React logos to learn more
-			</p>
+			<div className='h-screen w-2/3 bg-sky-dark'></div>
 		</div>
 	)
 }
