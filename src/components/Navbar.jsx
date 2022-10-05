@@ -5,8 +5,8 @@ import Button from './Button'
 export default function Navbar({ isActive, handleClick }) {
 	return (
 		<div
-			className={`fixed top-0 z-10 h-full w-1/3 bg-sky-blue px-10 ${
-				isActive ? '-left-full duration-200' : 'left-0 duration-200'
+			className={`fixed top-0 left-0 z-10 h-full w-1/3 bg-sky-blue px-10 ${
+				isActive ? '-left-1/3 duration-500' : 'left-0 duration-500'
 			}`}
 		>
 			<div className='grid grid-cols-1 grid-rows-5 items-center gap-3'>
